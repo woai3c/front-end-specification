@@ -16,3 +16,8 @@ npm i
 npm run dev
 ```
 然后在浏览器打开 `http://localhost:8080` 进行访问。 
+
+### 引用资料
+* [百度 spec](https://github.com/ecomfe/spec)
+* [airbnb-javascript](https://github.com/airbnb/javascript)
+* [airbnb-javascript 中文版](https://github.com/lin-123/javascript)
