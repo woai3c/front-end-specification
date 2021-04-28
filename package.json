@@ -1,0 +1,22 @@
+{
+  "name": "front-end-specification",
+  "version": "1.0.0",
+  "description": "前端规范",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev doc",
+    "build": "vuepress build doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://10.20.7.105/tanguangzhi/front-end-specification"
+  },
+  "author": "谭光志",
+  "bugs": {
+    "url": "http://10.20.7.105/tanguangzhi/front-end-specification/issues"
+  },
+  "homepage": "http://10.20.7.105/tanguangzhi/front-end-specification",
+  "devDependencies": {
+    "vuepress": "^1.8.0"
+  }
+}
