@@ -1,5 +1,5 @@
 ## 简介
-前端相关规范目录：
+前端规范目录：
 * [JavaScript 编码规范](doc/js.md)
 * [CSS 编码规范](doc/css.md)
 * [HTML 编码规范](doc/html.md)
