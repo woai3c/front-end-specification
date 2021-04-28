@@ -8,14 +8,14 @@
     "build": "vuepress build doc"
   },
   "repository": {
-    "type": "git",
-    "url": "git+http://10.20.7.105/tanguangzhi/front-end-specification"
+      "type": "git",
+      "url": "git+https://github.com/woai3c/front-end-specification.git"
   },
-  "author": "谭光志",
   "bugs": {
-    "url": "http://10.20.7.105/tanguangzhi/front-end-specification/issues"
+      "url": "https://github.com/woai3c/front-end-specification/issues"
   },
-  "homepage": "http://10.20.7.105/tanguangzhi/front-end-specification",
+  "license": "MIT",
+  "homepage": "https://github.com/woai3c/front-end-specification#readme",
   "devDependencies": {
     "vuepress": "^1.8.0"
   }
