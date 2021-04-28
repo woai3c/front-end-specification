@@ -2,7 +2,6 @@
   "name": "front-end-specification",
   "version": "1.0.0",
   "description": "前端规范",
-  "main": "index.js",
   "scripts": {
     "dev": "vuepress dev doc",
     "build": "vuepress build doc"
