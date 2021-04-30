@@ -8,7 +8,10 @@
 * [文件命名规范](doc/file.md)
 * [规范验证与代码格式化](doc/verify.md)
 
-如果你想拥有更好的阅读体验，可以克隆项目，执行以下命令：
+### 在线预览
+* [预览入口](https://woai3c.github.io/front-end-specification/)
+
+由于在线预览使用的是 Github Page，如果没有翻墙，网速可能会比较慢。如果你想拥有更好的阅读体验，可以克隆项目，执行以下命令：
 ```bash
 # 安装依赖
 npm i
