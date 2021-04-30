@@ -29,6 +29,8 @@ module.exports = {
             ['/file', '文件命名规范'],
             ['/verify', '规范验证与代码格式化'],
         ],
+        repo: 'https://github.com/woai3c/front-end-specification',
+        repoLabel: '给作者的 Github 点个 star 吧！',
         displayAllHeaders: true,
         smoothScroll: true,
     }
