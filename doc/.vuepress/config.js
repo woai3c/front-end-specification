@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/front-end-specification/',
     title: '前端规范',
     head: [
         ['meta', { name: 'referrer', content: 'no-referrer' }],
