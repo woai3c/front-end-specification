@@ -756,7 +756,7 @@
     > Why? 他会令人迷惑不解， 比如下面这个， a到底等于几， 这个需要想一下。
 
     ```javascript
-    var b = 1;
+    let b = 1;
     // bad
     function count(a = b++) {
       console.log(a);
@@ -791,10 +791,10 @@
 
     ```javascript
     // bad
-    var add = new Function('a', 'b', 'return a + b');
+    const add = new Function('a', 'b', 'return a + b');
 
     // still bad
-    var subtract = Function('a', 'b', 'return a - b');
+    const subtract = Function('a', 'b', 'return a - b');
     ```
 
   <a name="7.11"></a>
@@ -1636,14 +1636,14 @@
       return x + y;
     }
 
-    var x = 1;
-    var y = a + 2;
+    let x = 1;
+    let y = a + 2;
 
     alert(getXPlusY(x, y));
 
     // 'type' 即使没有使用也可以可以被忽略， 因为这个有一个 rest 取值的属性。
     // 这是从对象中抽取一个忽略特殊字段的对象的一种形式
-    var { type, ...coords } = data;
+    const { type, ...coords } = data;
     // 'coords' 现在就是一个没有 'type' 属性的 'data' 对象
     ```
 
@@ -2238,7 +2238,7 @@
      * @return {Object} 返回值描述
      */
     function foo(p1, p2, p3) {
-        var p3 = p3 || 10;
+        p3 = p3 || 10;
         return {
             p1: p1,
             p2: p2,
@@ -2579,8 +2579,8 @@ function objToUrlParam(obj = {}) {
     var arr = [1 , 2];
 
     // good
-    var foo = 1, bar = 2;
-    var arr = [1, 2];
+    let foo = 1, bar = 2;
+    let arr = [1, 2];
     ```
 
  
@@ -2613,16 +2613,16 @@ function objToUrlParam(obj = {}) {
     <!-- markdownlint-disable MD012 -->
     ```javascript
     // bad
-    var x = 1;
+    let x = 1;
 
 
 
-    var y = 2;
+    let y = 2;
 
     // good
-    var x = 1;
+    let x = 1;
 
-    var y = 2;
+    let y = 2;
     ```
     <!-- markdownlint-enable MD012 -->
 
