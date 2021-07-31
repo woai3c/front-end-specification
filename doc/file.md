@@ -3,6 +3,15 @@
 ```
 package-lock.json
 ```
+
+### 类文件
+假设你的文件里就只有一个类，那么文件名要与类名一致。
+```js
+// 文件名为 Apple.js
+export default class Apple {
+    // ...
+}
+```
 ## 复数与缩写
 当你的目录有多个子文件时，需要用复数形式，示例：
 ```bash
