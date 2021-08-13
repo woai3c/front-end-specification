@@ -7,7 +7,8 @@
         - Header.vue
         - Footer.vue
     - pages
-        - home.vue
+        - home
+            - index.vue
             - Button.vue # 只用于该页面的组件放在该页面目录下
         - list.vue
 ```
