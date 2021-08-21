@@ -7,6 +7,7 @@
 * [Git 规范](doc/git.md)
 * [文件命名规范](doc/file.md)
 * [规范验证与代码格式化](doc/verify.md)
+* [其他](doc/other.md)
 
 ### 在线预览
 * [预览入口](https://woai3c.github.io/front-end-specification/)

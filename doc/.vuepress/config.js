@@ -16,6 +16,7 @@ module.exports = {
                     { text: 'Git 规范', link: '/git' },
                     { text: '文件命名规范', link: '/file' },
                     { text: '规范验证与代码格式化', link: '/verify' },
+                    { text: '其他', link: '/other' },
                 ]
             }
         ],
@@ -28,6 +29,7 @@ module.exports = {
             ['/git', 'Git 规范'],
             ['/file', '文件命名规范'],
             ['/verify', '规范验证与代码格式化'],
+            ['/other', '其他'],
         ],
         repo: 'https://github.com/woai3c/front-end-specification',
         repoLabel: '给作者的 Github 点个 star 吧！',
