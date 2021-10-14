@@ -27,11 +27,10 @@ export default class Apple {
 }
 ```
 
-一些特殊的文件可保持不变，例如默认生成的 `package-lock` 文件。
+一些特殊的文件可保持不变，例如执行 `npm init -y` 命令默认生成的 `package-lock.json` 文件。
 ```
 package-lock.json
 ```
-类名一致。
 
 ## 复数与缩写
 当你的目录有多个子文件时，需要用复数形式，示例：
