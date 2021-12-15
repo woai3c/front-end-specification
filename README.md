@@ -9,8 +9,8 @@
 * [规范验证与代码格式化](doc/verify.md)
 * [其他](doc/other.md)
 
-### 在线预览
-* [预览入口](https://woai3c.github.io/front-end-specification/)
+### 在线阅读
+* [Github 访问地址](https://woai3c.github.io/front-end-specification/)
 
 如果在线访问比较慢，建议你克隆项目在本地观看，下载项目后执行以下命令：
 ```bash
