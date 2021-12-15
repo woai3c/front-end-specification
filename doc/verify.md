@@ -141,19 +141,32 @@ npm i -D stylelint-scss
 #### 扩展
 如何格式化 HTML、Vue（或其他后缀） 文件中的 HTML 代码？
 
-这需要利用 VSCode 自带的格式化，快捷键是 `shift + alt + f`。假设当前 VSCode 打开的是一个 Vue 文件，按下 `shift + alt + f` 会提示你选择一种格式化规范。如果没提示，那就是已经有默认的格式化规范了（一般是 vetur 插件），然后 Vue 文件的所有代码都会格式化，并且格式化规则还可以自己配置。
+`.vue` 文件的 HTML 代码可以使用 `eslint-plugin-vue` 插件来进行格式化：
+```js
+extends: [
+    'plugin:vue/recommended', // 在 .eslintrc.js 文件中加上这一行代码
+    '@vue/airbnb',
+],
+```
 
-具体规则如下图所示，可以根据自己的喜好来选择格式化规则。
+其他的 HTML 文件需要利用 VSCode 自带的格式化，快捷键是 `shift + alt + f`。假设当前 VSCode 已经打开了一个 HTML 文件，按下 `shift + alt + f` 会提示你选择一种格式化规范。如果没提示，那就是已经有默认的格式化规范了，然后 HTML 文件的所有代码都会格式化，并且格式化规则还可以自己配置。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/f532633b2856c8e1cedaa6c38c176151.png)
+#### 疑难问题
+##### `Unknown word (CssSyntaxError)` 错误
+解决方案为降级安装 VSCode 的 `stylelint` 插件，点击插件旁边的小齿轮，再点 `Install Another Version`，选择其他版本进行安装。
 
-因为之前已经设置过 ESlint 和 Stylelint 的格式化规则了，所以 Vue 文件只需要格式化 HTML 中的代码，因此需要禁止 vetur 格式化 JavaScript 和 CSS 代码：
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e79df36c850a499e8dde006f4d2dc62a~tplv-k3u1fbpfcp-watermark.image?)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/64fac739a981493721ae2fbdda495be0.png)
-
-根据上图配置完成后，回到刚才的 Vue 文件。随意打乱代码的格式，再按下 `shift + alt + f` ，会发现 HTML 代码已经格式化了，但是 JavaScript 和 CSS 代码并没格式化。没关系，因为已经设置了 ESlint 和 Stylelint 格式化，所以只要执行保存操作，JavaScript 和 CSS 的代码也会自动格式化。
-
-同理，其他类型的文件也可以这样设置格式化规范。
+选 `0.87.6` 版本安装就可以了，这时 css 自动格式化功能恢复正常。
+##### 忽略 `.vue` 文件中的 HTML 模板验证规则无效
+举个例子，如果你将 HTML 模板每行的代码文本长度设为 100，当超过这个长度后 eslint 将会报错。此时如果你还是想超过这个长度，可以选择忽略这个规则：
+```js
+/* eslint-disable max-len */
+```
+注意，以上这行忽略验证的代码是不会生效的，因为这个注释是 JavaScript 注释，我们需要将注释改为 HTML 格式，这样忽略验证才会生效：
+```html
+<!-- eslint-disable max-len -->
+```
 
 
 ## git commit message 验证
