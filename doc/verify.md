@@ -176,24 +176,6 @@ extends: [
 ```html
 <!-- eslint-disable max-len -->
 ```
-
-#### 疑难问题
-##### `Unknown word (CssSyntaxError)` 错误
-解决方案为降级安装 VSCode 的 `stylelint` 插件，点击插件旁边的小齿轮，再点 `Install Another Version`，选择其他版本进行安装。
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e79df36c850a499e8dde006f4d2dc62a~tplv-k3u1fbpfcp-watermark.image?)
-
-选 `0.87.6` 版本安装就可以了，这时 css 自动格式化功能恢复正常。
-##### 忽略 `.vue` 文件中的 HTML 模板验证规则无效
-举个例子，如果你将 HTML 模板每行的代码文本长度设为 100，当超过这个长度后 eslint 将会报错。此时如果你还是想超过这个长度，可以选择忽略这个规则：
-```js
-/* eslint-disable max-len */
-```
-注意，以上这行忽略验证的代码是不会生效的，因为这个注释是 JavaScript 注释，我们需要将注释改为 HTML 格式，这样忽略验证才会生效：
-```html
-<!-- eslint-disable max-len -->
-```
-
 ## git commit message 验证
 利用 [git hook](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90) 能在特定的重要动作发生时触发自定义脚本。
 
