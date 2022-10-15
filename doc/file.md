@@ -12,7 +12,7 @@
             - Button.vue # 只用于该页面的组件放在该页面目录下
         - list.vue
 ```
-## 命名
+## 文件命名
 文件命名使用小驼峰式命名，类文件、组件文件等使用大驼峰式全名。文件名要跟文件里导出的唯一对象（或默认导出对象）相同。
 ```js
 // 文件名为 add.js
@@ -30,6 +30,16 @@ export default class Apple {
 一些特殊的文件可保持不变，例如执行 `npm init -y` 命令默认生成的 `package-lock.json` 文件。
 ```
 package-lock.json
+```
+## 目录命名
+目录统一使用 `aaa-bbb` 格式命名，如果一个组件太大，需要拆分成多个小组件的，可以把目录改为组件名，即大驼峰式全名：
+```bash
+- Home
+    - index.vue
+    - Button.vue
+    - Main.vue
+    - Header.vue
+    - Footer.vue
 ```
 
 ## 复数与缩写
