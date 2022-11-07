@@ -13,7 +13,7 @@
         - list.vue
 ```
 ## 文件命名
-文件命名使用小驼峰式命名，类文件、组件文件等使用大驼峰式全名。文件名要跟文件里导出的唯一对象（或默认导出对象）相同。
+文件命名使用小驼峰式命名，类文件、组件文件等使用大驼峰式命名。文件名要跟文件里导出的唯一对象（或默认导出对象）相同。
 ```js
 // 文件名为 add.js
 export default function add(a, b) {
@@ -25,6 +25,14 @@ export default function add(a, b) {
 export default class Apple {
     // ...
 }
+```
+如果组件、类的代码过于庞大，需要进行拆分，可以创建几个小文件，并放在一个以大驼峰命名的文件夹里。
+```js
+- components
+    - Editor
+        - index.vue
+        - Header.vue
+        - Main.vue
 ```
 
 一些特殊的文件可保持不变，例如执行 `npm init -y` 命令默认生成的 `package-lock.json` 文件。
