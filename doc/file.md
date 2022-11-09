@@ -14,6 +14,14 @@
 ```
 ## 文件命名
 文件命名使用小驼峰式命名，类文件、组件文件等使用大驼峰式命名。文件名要跟文件里导出的唯一对象（或默认导出对象）相同。
+```
+- views
+    - home.vue
+    - list.vue
+
+- Apple.js
+- add.js
+```
 ```js
 // 文件名为 add.js
 export default function add(a, b) {
