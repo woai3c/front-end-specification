@@ -7,15 +7,15 @@
     "build": "vuepress build doc"
   },
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/woai3c/front-end-specification.git"
+    "type": "git",
+    "url": "git+https://github.com/woai3c/front-end-specification.git"
   },
   "bugs": {
-      "url": "https://github.com/woai3c/front-end-specification/issues"
+    "url": "https://github.com/woai3c/front-end-specification/issues"
   },
   "license": "MIT",
   "homepage": "https://github.com/woai3c/front-end-specification#readme",
-  "devDependencies": {
-    "vuepress": "^1.8.0"
+  "dependencies": {
+    "vuepress": "^1.9.9"
   }
 }
