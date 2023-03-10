@@ -3084,31 +3084,15 @@ const appleNum = 1
 ## 事件
 
   <a name="25.1"></a>
-  <a name="events--hash"></a>
-  - [25.1](#events--hash) 通过哈希而不是原始值向事件装载数据时(不论是DOM事件还是像Backbone事件的很多属性)。 这使得后续的贡献者（程序员）想这个事件装载更多的数据时不用去找或者更新每个处理器。例如：
+  <a name="events--name"></a>
+  - [25.1](#events--name) 事件回调函数统一以 `on` 加事件名的方式进行命名：
 
     ```javascript
     // bad
-    $(this).trigger('listingUpdated', listing.id);
+    function handleClick() {}
 
-    ...
-
-    $(this).on('listingUpdated', (e, listingId) => {
-      // do something with listingId
-    });
-    ```
-
-    prefer:
-
-    ```javascript
     // good
-    $(this).trigger('listingUpdated', { listingId: listing.id });
-
-    ...
-
-    $(this).on('listingUpdated', (e, data) => {
-      // do something with data.listingId
-    });
+    function onClick() {}
     ```
 
   **[回到顶部](#javascript-编码规范)**
