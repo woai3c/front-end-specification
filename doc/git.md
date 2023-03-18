@@ -1,11 +1,19 @@
 ## Git 分支管理规范
+
+![](./img/git-flow.png)
+
+[点击查看大图](https://woai3c.github.io/front-end-specification/assets/img/git-flow.e5218e44.png)
 ### 命名
 分支命名以 `feature/xx-xx` `fix/xx-xx` 的格式命名，中间用短横线 `-` 连接。
 ### 分支管理
 项目需要根据环境的不同创建对应的分支：
 * master（线上环境）
-* develop（测试环境）
+* develop（开发环境）
+* test（测试环境）
 * feature/xxx（功能分支）
+* fix/xxx（修复分支）
+* 其他...
+
 #### 开发新功能
 当团队成员开发新功能时，需要从 `master` 分支上拉一个 `feature/功能名称-开发姓名` 分支进行开发，例如：`feature/login-tgz`。开发完成后需要合并到 `develop` 分支进行部署测试。
 
@@ -26,9 +34,10 @@ chore: 修改按钮样式
 chore: 修改按钮样式及文字
 ```
 **注意**，在将分支合并到另一分支前，例如将 `feature/*` 合并到 `develop`。需要先拉取 `develop` 的最新更新，然后回到 `feature/*`，执行 `git rebase develop` 操作，再提交，最后提合并分支操作。
-#### 部署
-在将自己的 feature 分支或 fix 分支合并到部署分支时，需要提合并请求进行合并。
-
+#### 标签备份
+每次代码上线时，均要对当前的线上环境分支（例如 master）进行打标签处理，用作备份。当线上环境出现问题时，可以快速回滚。标签命名有两种方式：
+1. 版本号命名，适合移动端 APP 或组件库
+2. 用时间+当天发布次数命名，例如 20230319-1，这种命名方式一般用于业务项目。
 ## Git Commit Message 规范
 git 在每次提交时，都需要填写 commit message。
 ```bash
