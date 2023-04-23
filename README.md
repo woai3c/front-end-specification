@@ -5,6 +5,7 @@
 * [HTML 编码规范](doc/html.md)
 * [Vue 编码规范](doc/vue.md)
 * [Git 规范](doc/git.md)
+* [Code Review 规范](doc/codereview.md)
 * [移动端适配规范](doc/mobile.html)
 * [文件命名规范](doc/file.md)
 * [规范验证与代码格式化](doc/verify.md)
