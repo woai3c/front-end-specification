@@ -1,5 +1,6 @@
 前端规范目录：
 * [JavaScript 编码规范](js.html)
+* [TypeScript 编码规范](ts.html)
 * [CSS 编码规范](css.html)
 * [HTML 编码规范](html.html)
 * [Vue 编码规范](vue.html)

@@ -10,6 +10,7 @@ module.exports = {
                 text: '前端规范',
                 items: [
                     { text: 'JavaScript 编码规范', link: '/js' },
+                    { text: 'TypeScript 编码规范', link: '/ts' },
                     { text: 'CSS 编码规范', link: '/css' },
                     { text: 'HTML 编码规范', link: '/html' },
                     { text: 'Vue 编码规范', link: '/vue' },
@@ -26,6 +27,7 @@ module.exports = {
         sidebar: [
             ['/', '简介'],
             ['/js', 'JavaScript 编码规范'],
+            ['/ts', 'TypeScript 编码规范'],
             ['/css', 'CSS 编码规范'],
             ['/html', 'HTML 编码规范'],
             ['/vue', 'Vue 编码规范'],

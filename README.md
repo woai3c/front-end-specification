@@ -1,6 +1,7 @@
 ## 简介
 前端规范目录：
 * [JavaScript 编码规范](doc/js.md)
+* [TypeScript 编码规范](doc/ts.md)
 * [CSS 编码规范](doc/css.md)
 * [HTML 编码规范](doc/html.md)
 * [Vue 编码规范](doc/vue.md)
