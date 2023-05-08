@@ -196,6 +196,9 @@ extends: [
 ```html
 <!-- eslint-disable max-len -->
 ```
+##### `selector-anb-no-unmatchable` 错误
+这是因为 `stylelint` 新增的规则引起的错误，但是这个规则又消除不了。所以需要把 `stylelint-scss` 锁死为 4.3.0 版本，重新安装此依赖后。再把 `stylelint-config-recommended-vue` 重新安装一遍，即可解决这个问题。
+
 ## git commit message 验证
 利用 [git hook](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90) 能在特定的重要动作发生时触发自定义脚本。
 
