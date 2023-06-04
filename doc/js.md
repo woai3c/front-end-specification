@@ -573,7 +573,7 @@
 
   <a name="6.2"></a>
   <a name="strings--line-length"></a>
-  - [6.2](#strings--line-length) 超过100个字符的字符串不应该用string串联成多行。
+  - [6.2](#strings--line-length) 超过 120 个字符的字符串不应该用string串联成多行。
     > Why? 被折断的字符串工作起来是糟糕的而且使得代码更不易被搜索。
 
     ```javascript

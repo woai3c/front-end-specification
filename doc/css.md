@@ -7,7 +7,6 @@
 1. [清除浮动](#清除浮动)
 1. [!important](#important)
 1. [文本](#文本)
-1. [数值](#数值)
 1. [url()](#url)
 1. [长度](#长度)
 1. [颜色](#颜色)
@@ -457,27 +456,6 @@ html[lang|=zh] q:before {
 html[lang|=zh] q:after {
     font-family: "Microsoft YaHei", sans-serif;
     content: "”";
-}
-```
-
-**[回到顶部](#css-编码规范)**
-
-## 数值
-
-
-#### 当数值为 0 - 1 之间的小数时，省略整数部分的 `0`。
-
-
-
-```css
-/* good */
-panel {
-    opacity: .8;
-}
-
-/* bad */
-panel {
-    opacity: 0.8;
 }
 ```
 
