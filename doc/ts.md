@@ -29,7 +29,8 @@ type AnyObject = Record<string, any>
 ## 接口 API 返回值需要使用 interface 进行声明
 ```ts
 interface Params {
-    id: string
+    id: string,
+    name: string
 }
 
 interface ListItem {
