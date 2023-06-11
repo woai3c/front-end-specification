@@ -935,21 +935,16 @@
 
   <a name="8.4"></a>
   <a name="arrows--one-arg-parens"></a>
-  - [8.4](#arrows--one-arg-parens) 如果你的函数只有一个参数，就删除圆括号。否则，参数总是放在圆括号里。 注意： 一直用圆括号也是没问题，只需要配置 [“always” option](https://eslint.org/docs/rules/arrow-parens#always) for eslint. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens.html)
+  - [8.4](#arrows--one-arg-parens) 参数总是放在圆括号里。  eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens.html)
 
     > Why? 这样少一些混乱， 其实没啥语法上的讲究，就保持一个风格。
 
     ```js
     // bad
-    [1, 2, 3].map((x) => x * x);
-
-    // good
     [1, 2, 3].map(x => x * x);
 
     // good
-    [1, 2, 3].map(number => (
-      `A long string with the ${number}. It’s so long that we don’t want it to take up space on the .map line!`
-    ));
+    [1, 2, 3].map((x) => x * x);
     ```
 
   <a name="8.5"></a>
