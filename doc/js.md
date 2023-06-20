@@ -2197,7 +2197,7 @@
   <a name="18.3"></a>
   <a name="comments--spaces"></a>
 
-- [18.3](#comments--spaces) 所有注释开头空一个，方便阅读。 eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
+- [18.3](#comments--spaces) 所有注释开头空一格，方便阅读。 eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
     ```javascript
     // bad
