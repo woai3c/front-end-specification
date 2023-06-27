@@ -1703,7 +1703,7 @@
 
     alert(getXPlusY(x, y));
 
-    // 'type' 即使没有使用也可以可以被忽略， 因为这个有一个 rest 取值的属性。
+    // 'type' 即使没有使用也不可以被忽略， 因为这个有一个 rest 取值的属性。
     // 这是从对象中抽取一个忽略特殊字段的对象的一种形式
     const { type, ...coords } = data;
     // 'coords' 现在就是一个没有 'type' 属性的 'data' 对象
