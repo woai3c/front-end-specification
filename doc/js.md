@@ -2718,6 +2718,24 @@ function objToUrlParam(obj = {}) {
     ```
     <!-- markdownlint-enable MD012 -->
 
+- [19.20](#whitespace--no-multiple-empty-lines) 单行的 import 语句要放在多行的 import 语句之前。
+
+  ```js
+  // bad
+  import {
+    a,
+    b,
+  } from 'foo'
+  import bar from 'bar'
+
+  // good
+  import bar from 'bar'
+  import {
+    a,
+    b,
+  } from 'foo'
+  ```
+
 **[回到顶部](#javascript-编码规范)**
 
 ## 逗号
