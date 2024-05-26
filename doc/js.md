@@ -2368,7 +2368,7 @@ function objToUrlParam(obj = {}) {
   <a name="19.1"></a>
   <a name="whitespace--spaces"></a>
 
-- [19.1](#whitespace--spaces) tab用4个空格. eslint: [`indent`](http://eslint.org/docs/rules/indent.html)
+- [19.1](#whitespace--spaces) tab 用 2 个空格. eslint: [`indent`](http://eslint.org/docs/rules/indent.html)
 
     ```javascript
     // good
