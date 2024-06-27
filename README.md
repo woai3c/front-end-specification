@@ -25,6 +25,11 @@ npm run dev
 ```
 然后在浏览器打开 `http://localhost:8080` 进行访问。 
 
+## eslint and prettier
+与代码规范配套的 eslint 插件在下面，有两个版本，大家注意选择适配的版本：
+* [vue](https://github.com/woai3c/eslint-config-airbnb-vue3-ts)
+* [no-vue](https://github.com/woai3c/eslint-config-airbnb-vue3-ts/tree/no-vue)
+
 ### 引用资料
 * [百度 spec](https://github.com/ecomfe/spec)
 * [airbnb-javascript](https://github.com/airbnb/javascript)
