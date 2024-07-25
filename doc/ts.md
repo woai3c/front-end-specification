@@ -5,22 +5,22 @@
 ```ts
 // bad
 const data: any = {
-    name: 'name',
-    age: 18,
-    address: 'beijing',
+  name: 'name',
+  age: 18,
+  address: 'beijing',
 }
 
 interface ListItem {
-    name: string
-    age: number
-    address: string
+  name: string
+  age: number
+  address: string
 }
 
 // good
 const data: ListItem = {
-    name: 'name',
-    age: 18,
-    address: 'beijing',
+  name: 'name',
+  age: 18,
+  address: 'beijing',
 }
 ```
 
@@ -34,21 +34,21 @@ type AnyObject = Record<string, any>
 
 ```ts
 interface Params {
-    id: string
-    name: string
+  id: string
+  name: string
 }
 
 interface ListItem {
-    name: string
-    age: number
-    address: string
+  name: string
+  age: number
+  address: string
 }
 
 export function getListData(params: Params): Promise<ListItem[]> {
-    return request({
-        url: '/people/list',
-        params,
-    })
+  return request({
+    url: '/people/list',
+    params,
+  })
 }
 ```
 
@@ -66,7 +66,7 @@ export function getListData(params: Params): Promise<ListItem[]> {
  * @returns
  */
 function sum(a: number, b: number) {
-    return a + b
+  return a + b
 }
 
 ```
@@ -78,6 +78,6 @@ function sum(a: number, b: number) {
  * 加法函数
  */
 function sum(a: number, b: number) {
-    return a + b
+  return a + b
 }
 ```

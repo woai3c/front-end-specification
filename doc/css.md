@@ -35,8 +35,8 @@
 
 ```css
 .selector {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 ```
 
@@ -85,21 +85,21 @@ font-family: Arial, sans-serif;
 ```css
 /* 不同属性值按逻辑分组 */
 background:
-    transparent url(aVeryVeryVeryLongUrlIsPlacedHere)
-    no-repeat 0 0;
+  transparent url(aVeryVeryVeryLongUrlIsPlacedHere)
+  no-repeat 0 0;
 
 /* 可重复多次的属性，每次重复一行 */
 background-image:
-    url(aVeryVeryVeryLongUrlIsPlacedHere)
-    url(anotherVeryVeryVeryLongUrlIsPlacedHere);
+  url(aVeryVeryVeryLongUrlIsPlacedHere)
+  url(anotherVeryVeryVeryLongUrlIsPlacedHere);
 
 /* 类似函数的属性值可以根据函数调用的缩进进行 */
 background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.04, rgb(88,94,124)),
-    color-stop(0.52, rgb(115,123,162))
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.04, rgb(88,94,124)),
+  color-stop(0.52, rgb(115,123,162))
 );
 ```
 
@@ -117,12 +117,12 @@ background-image: -webkit-gradient(
 .post,
 .page,
 .comment {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 /* bad */
 .post, .page, .comment {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 ```
 
@@ -133,28 +133,28 @@ background-image: -webkit-gradient(
 ```css
 /* good */
 main > nav {
-    padding: 10px;
+  padding: 10px;
 }
 
 label + input {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 input:checked ~ button {
-    background-color: #69C;
+  background-color: #69C;
 }
 
 /* bad */
 main>nav {
-    padding: 10px;
+  padding: 10px;
 }
 
 label+input {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 input:checked~button {
-    background-color: #69C;
+  background-color: #69C;
 }
 ```
 
@@ -170,12 +170,12 @@ input:checked~button {
 ```css
 /* good */
 article[character="juliet"] {
-    voice-family: "Vivien Leigh", victoria, female;
+  voice-family: "Vivien Leigh", victoria, female;
 }
 
 /* bad */
 article[character='juliet'] {
-    voice-family: "Vivien Leigh", victoria, female;
+  voice-family: "Vivien Leigh", victoria, female;
 }
 ```
 
@@ -186,28 +186,21 @@ article[character='juliet'] {
 
 在性能和维护性上，都有一定的影响。
 
-
-
-
-
 ```css
 /* good */
 #error,
 .danger-message {
-    font-color: #c00;
+  font-color: #c00;
 }
 
 /* bad */
 dialog#error,
 p.danger-message {
-    font-color: #c00;
+  font-color: #c00;
 }
 ```
 
 #### 选择器的嵌套层级应不大于 `4` 级，位置靠后的限定条件应尽可能精确。
-
-
-
 ```css
 /* good */
 #username input {}
@@ -231,8 +224,8 @@ p.danger-message {
 ```css
 /* good */
 .selector {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* bad */
@@ -246,12 +239,12 @@ p.danger-message {
 ```css
 /* good */
 .selector {
-    margin: 0;
+  margin: 0;
 }
 
 /* bad */
 .selector {
-    margin: 0
+  margin: 0
 }
 ```
 
@@ -264,14 +257,14 @@ p.danger-message {
 ```css
 /* good */
 .post {
-    font: 12px/1.5 arial, sans-serif;
+  font: 12px/1.5 arial, sans-serif;
 }
 
 /* bad */
 .post {
-    font-family: arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
 }
 ```
 
@@ -281,33 +274,30 @@ p.danger-message {
 
 `border` / `margin` / `padding` 等缩写会同时设置多个属性的值，容易覆盖不需要覆盖的设定。如某些方向需要继承其他声明的值，则应该分开设置。
 
-
-
-
 ```css
 /* centering <article class="page"> horizontally and highlight featured ones */
 article {
-    margin: 5px;
-    border: 1px solid #999;
+  margin: 5px;
+  border: 1px solid #999;
 }
 
 /* good */
 .page {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .featured {
-    border-color: #69c;
+  border-color: #69c;
 }
 
 /* bad */
 .page {
-    margin: 5px auto; /* introducing redundancy */
+  margin: 5px auto; /* introducing redundancy */
 }
 
 .featured {
-    border: 1px solid #69c; /* introducing redundancy */
+  border: 1px solid #69c; /* introducing redundancy */
 }
 ```
 
@@ -323,32 +313,29 @@ article {
 
 另外，如果包含 `content` 属性，应放在最前面。
 
-
-
-
 ```css
 .sidebar {
-    /* formatting model: positioning schemes / offsets / z-indexes / display / ...  */
-    position: absolute;
-    top: 50px;
-    left: 0;
-    overflow-x: hidden;
+  /* formatting model: positioning schemes / offsets / z-indexes / display / ...  */
+  position: absolute;
+  top: 50px;
+  left: 0;
+  overflow-x: hidden;
 
-    /* box model: sizes / margins / paddings / borders / ...  */
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ddd;
+  /* box model: sizes / margins / paddings / borders / ...  */
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ddd;
 
-    /* typographic: font / aligns / text styles / ... */
-    font-size: 14px;
-    line-height: 20px;
+  /* typographic: font / aligns / text styles / ... */
+  font-size: 14px;
+  line-height: 20px;
 
-    /* visual: colors / shadows / gradients / ... */
-    background: #f5f5f5;
-    color: #333;
-    -webkit-transition: color 1s;
-       -moz-transition: color 1s;
-            transition: color 1s;
+  /* visual: colors / shadows / gradients / ... */
+  background: #f5f5f5;
+  color: #333;
+  -webkit-transition: color 1s;
+      -moz-transition: color 1s;
+          transition: color 1s;
 }
 ```
 
@@ -392,8 +379,6 @@ article {
 
 ## z-index
 
-
-
 #### 将 `z-index` 进行分层，对文档流外绝对定位元素的视觉层级关系进行管理。
 
 解释：
@@ -418,14 +403,9 @@ article {
 
 第三方环境对于开发者来说完全不可控。在第三方环境下的元素，为了保证元素不被其页面其他样式定义覆盖，需要采用此做法。
 
-
-
-
 **[回到顶部](#css-编码规范)**
 
 ## 文本
-
-
 #### 文本内容必须用双引号包围。
 
 解释：
@@ -438,24 +418,24 @@ article {
 ```css
 /* good */
 html[lang|="zh"] q:before {
-    font-family: "Microsoft YaHei", sans-serif;
-    content: "“";
+  font-family: "Microsoft YaHei", sans-serif;
+  content: "“";
 }
 
 html[lang|="zh"] q:after {
-    font-family: "Microsoft YaHei", sans-serif;
-    content: "”";
+  font-family: "Microsoft YaHei", sans-serif;
+  content: "”";
 }
 
 /* bad */
 html[lang|=zh] q:before {
-    font-family: 'Microsoft YaHei', sans-serif;
-    content: '“';
+  font-family: 'Microsoft YaHei', sans-serif;
+  content: '“';
 }
 
 html[lang|=zh] q:after {
-    font-family: "Microsoft YaHei", sans-serif;
-    content: "”";
+  font-family: "Microsoft YaHei", sans-serif;
+  content: "”";
 }
 ```
 
@@ -465,12 +445,9 @@ html[lang|=zh] q:after {
 
 
 #### `url()` 函数中的路径不加引号。
-
-
-
 ```css
 body {
-    background: url(bg.png);
+  background: url(bg.png);
 }
 ```
 
@@ -482,7 +459,7 @@ body {
 
 ```css
 body {
-    background: url(//baidu.com/img/bg.png) no-repeat 0 0;
+  background: url(//baidu.com/img/bg.png) no-repeat 0 0;
 }
 ```
 
@@ -494,17 +471,15 @@ body {
 
 #### 长度为 `0` 时须省略单位。 (也只有长度单位可省)
 
-
-
 ```css
 /* good */
 body {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 /* bad */
 body {
-    padding: 0px 5px;
+  padding: 0px 5px;
 }
 ```
 
@@ -520,20 +495,17 @@ body {
 
 带有alpha的颜色信息可以使用 `rgba()`。使用 `rgba()` 时每个逗号后必须保留一个空格。
 
-
-
-
 ```css
 /* good */
 .success {
-    box-shadow: 0 0 2px rgba(0, 128, 0, .3);
-    border-color: #008000;
+  box-shadow: 0 0 2px rgba(0, 128, 0, .3);
+  border-color: #008000;
 }
 
 /* bad */
 .success {
-    box-shadow: 0 0 2px rgba(0,128,0,.3);
-    border-color: rgb(0, 128, 0);
+  box-shadow: 0 0 2px rgba(0,128,0,.3);
+  border-color: rgb(0, 128, 0);
 }
 ```
 
@@ -544,53 +516,47 @@ body {
 ```css
 /* good */
 .success {
-    background-color: #aca;
+  background-color: #aca;
 }
 
 /* bad */
 .success {
-    background-color: #aaccaa;
+  background-color: #aaccaa;
 }
 ```
 
 #### 颜色值不允许使用命名色值。
 
-
-
 ```css
 /* good */
 .success {
-    color: #90ee90;
+  color: #90ee90;
 }
 
 /* bad */
 .success {
-    color: lightgreen;
+  color: lightgreen;
 }
 ```
 
 #### 颜色值中的英文字符采用小写。如不用小写也需要保证同一项目内保持大小写一致。
-
-
-
-
 ```css
 /* good */
 .success {
-    background-color: #aca;
-    color: #90ee90;
+  background-color: #aca;
+  color: #90ee90;
 }
 
 /* good */
 .success {
-    background-color: #ACA;
-    color: #90EE90;
+  background-color: #ACA;
+  color: #90EE90;
 }
 
 /* bad */
 .success {
-    background-color: #ACA;
-    color: #90ee90;
+  background-color: #ACA;
+  color: #90ee90;
 }
 ```
 
@@ -606,18 +572,15 @@ body {
 
 2D 位置初始值为 `0% 0%`，但在只有一个方向的值时，另一个方向的值会被解析为 center。为避免理解上的困扰，应同时给出两个方向的值。[background-position属性值的定义](http://www.w3.org/TR/CSS21/colors.html#propdef-background-position)
 
-
-
-
 ```css
 /* good */
 body {
-    background-position: center top; /* 50% 0% */
+  background-position: center top; /* 50% 0% */
 }
 
 /* bad */
 body {
-    background-position: top; /* 50% 0% */
+  background-position: top; /* 50% 0% */
 }
 ```
 
@@ -629,8 +592,6 @@ body {
 
 
 ## 字体族
-
-
 #### `font-family` 属性中的字体族名称应使用字体的英文 `Family Name`，其中如有空格，须放置在引号中。
 
 解释：
@@ -648,12 +609,9 @@ body {
 文泉驿正黑 | Linux | WenQuanYi Zen Hei
 文泉驿微米黑 | Linux | WenQuanYi Micro Hei
 
-
-
-
 ```css
 h1 {
-    font-family: "Microsoft YaHei";
+  font-family: "Microsoft YaHei";
 }
 ```
 
@@ -664,49 +622,43 @@ h1 {
 
 更详细说明可参考[本文](http://www.zhihu.com/question/19911793/answer/13329819)。
 
-
-
 ```css
 /* Display according to platform */
 .article {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* Specific for most platforms */
 h1 {
-    font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 }
 ```
 
 #### `font-family` 不区分大小写，但在同一个项目中，同样的 `Family Name` 大小写必须统一。
 
-
-
 ```css
 /* good */
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-    font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
 }
 
 /* bad */
 body {
-    font-family: arial, sans-serif;
+  font-family: arial, sans-serif;
 }
 
 h1 {
-    font-family: arial, "Microsoft YaHei", sans-serif;
+  font-family: arial, "Microsoft YaHei", sans-serif;
 }
 ```
 
 **[回到顶部](#css-编码规范)**
 
 ## 字重
-
-
 #### `font-weight` 属性必须使用数值方式描述。
 
 解释：
@@ -722,20 +674,18 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 ```css
 /* good */
 h1 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 /* bad */
 h1 {
-    font-weight: bold;
+  font-weight: bold;
 }
 ```
 
 **[回到顶部](#css-编码规范)**
 
 ## 行高
-
-
 #### `line-height` 在定义文本段落时，应使用数值。
 
 解释：
@@ -744,12 +694,9 @@ h1 {
 
 当 `line-height` 用于控制垂直居中时，还是应该设置成与容器高度一致。
 
-
-
-
 ```css
 .container {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 ```
 
@@ -763,17 +710,15 @@ h1 {
 
 #### 使用 `transition` 时应指定 `transition-property`。
 
-
-
 ```css
 /* good */
 .box {
-    transition: color 1s, border-color 1s;
+  transition: color 1s, border-color 1s;
 }
 
 /* bad */
 .box {
-    transition: all 1s;
+  transition: all 1s;
 }
 ```
 
@@ -790,39 +735,30 @@ h1 {
 
 典型的，可以使用 `translate` 来代替 `left` 作为动画属性。
 
-
-
 ```css
 /* good */
 .box {
-    transition: transform 1s;
+  transition: transform 1s;
 }
 .box:hover {
-    transform: translate(20px); /* move right for 20px */
+  transform: translate(20px); /* move right for 20px */
 }
 
 /* bad */
 .box {
-    left: 0;
-    transition: left 1s;
+  left: 0;
+  transition: left 1s;
 }
 .box:hover {
-    left: 20px; /* move right for 20px */
+  left: 20px; /* move right for 20px */
 }
 ```
-
-
-
 
 **[回到顶部](#css-编码规范)**
 
 ## 响应式
 
-
-
 #### `Media Query` 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。
-
-
 
 ```css
 @media

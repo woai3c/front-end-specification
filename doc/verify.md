@@ -17,14 +17,14 @@ npm i -D babel-eslint eslint eslint-config-airbnb-base eslint-plugin-import
 2. 配置 `.eslintrc` 文件
 ```
 {
-    "parserOptions": {
-        "ecmaVersion": 2019
-    },
-    "env": {
-        "es6": true,
-    },
-    "parser": "babel-eslint",
-    "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 2019
+  },
+  "env": {
+    "es6": true,
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
 }
 ```
 3. 在 `package.json` 的 `scripts` 加上这行代码 `"lint": "eslint --ext .js test/ src/"`。然后执行 `npm run lint` 即可开始验证代码。代码中的 `test/ src/` 是要进行校验的代码目录，这里指明了要检查 `test`、`src` 目录下的代码。
@@ -50,21 +50,21 @@ Stylelint 是一个开源的、用于检查 CSS 代码格式的开源工具。�
 
 ```js
 "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+  "source.fixAll": true,
 },
 "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact",
 ],
 "eslint.alwaysShowStatus": true,
 "stylelint.validate": [
-    "css",
-    "less",
-    "postcss",
-    "scss",
-    "sass"
+  "css",
+  "less",
+  "postcss",
+  "scss",
+  "sass"
 ],
 ```
 同时要确保 VSCode 右下角的状态栏 ESlint 是处于工作状态的。如果右下角看不到 Eslint 的标识，请按照上面讲过的步骤打开 `setting.json`，加上这行代码：
@@ -86,17 +86,17 @@ npm i -D eslint eslint-config-airbnb-vue3-ts
 添加 `.eslintrc` 文件，具体配置项为：
 ```js
 module.exports = {
-    root: true,
-    env: {
-        browser: true,
-        node: true,
-        es6: true,
-        jest: true,
-    },
-    extends: ['eslint-config-airbnb-vue3-ts'],
-    rules: {
-        
-    },
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    jest: true,
+  },
+  extends: ['eslint-config-airbnb-vue3-ts'],
+  rules: {
+    
+  },
 }
 
 ```
@@ -117,32 +117,32 @@ npm i -D sass stylelint stylelint-config-standard-scss stylelint-scss
 在项目根目录下新建一个 `.stylelintrc.js` 文件，并输入以下内容：
 ```js
 module.exports = {
-    extends: [
-        'stylelint-config-standard-scss',
+  extends: [
+    'stylelint-config-standard-scss',
+  ],
+  rules: {
+    indentation: 4,
+    'media-feature-range-notation': null,
+    'alpha-value-notation': ['number'],
+    'color-function-notation': ['legacy'],
+    'no-descending-specificity': null,
+    'font-family-no-missing-generic-family-keyword': null,
+    'selector-type-no-unknown': null,
+    'at-rule-no-unknown': null,
+    'no-duplicate-selectors': null,
+    'no-empty-source': null,
+    'selector-class-pattern': null,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      { ignorePseudoClasses: ['global', 'deep'] },
     ],
-    rules: {
-        indentation: 4,
-        'media-feature-range-notation': null,
-        'alpha-value-notation': ['number'],
-        'color-function-notation': ['legacy'],
-        'no-descending-specificity': null,
-        'font-family-no-missing-generic-family-keyword': null,
-        'selector-type-no-unknown': null,
-        'at-rule-no-unknown': null,
-        'no-duplicate-selectors': null,
-        'no-empty-source': null,
-        'selector-class-pattern': null,
-        'selector-pseudo-class-no-unknown': [
-            true,
-            { ignorePseudoClasses: ['global', 'deep'] },
-        ],
-        'scss/at-rule-no-unknown': [
-            true,
-            {
-                ignoreAtRules: ['tailwind'],
-            },
-        ],
-    },
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind'],
+      },
+    ],
+  },
 };
 
 ```
@@ -220,20 +220,20 @@ const msg = require('fs')
 const commitRE = /^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|release)(\(.+\))?: .{1,50}/
 
 if (!commitRE.test(msg)) {
-    console.log()
-    console.error(
-        `  ${chalk.bgRed.white(' ERROR ')} ${chalk.red(
-            '不合法的 commit 消息格式',
-        )}\n\n`
-          + chalk.red(
-              '  请使用正确的提交格式:\n\n',
-          )
-          + `    ${chalk.green('feat: add \'comments\' option')}\n`
-          + `    ${chalk.green('fix: handle events on blur (close #28)')}\n\n`
-          + chalk.red('  请查看 git commit 提交规范：https://github.com/woai3c/Front-end-articles/blob/master/git%20commit%20style.md。\n'),
-    )
+  console.log()
+  console.error(
+    `  ${chalk.bgRed.white(' ERROR ')} ${chalk.red(
+      '不合法的 commit 消息格式',
+    )}\n\n`
+      + chalk.red(
+        '  请使用正确的提交格式:\n\n',
+      )
+      + `  ${chalk.green('feat: add \'comments\' option')}\n`
+      + `  ${chalk.green('fix: handle events on blur (close #28)')}\n\n`
+      + chalk.red('  请查看 git commit 提交规范：https://github.com/woai3c/Front-end-articles/blob/master/git%20commit%20style.md。\n'),
+  )
 
-    process.exit(1)
+  process.exit(1)
 }
 ```
 然后再创建 `commit-msg` 钩子文件
@@ -264,16 +264,16 @@ npm i -D lint-staged
 **文件过滤说明**：
 ```json
 {
-    "*.js": "项目下所有的 js 文件（不包含子文件夹）",
-    "**/*.js": "项目下所有的 js 文件",
-    "src/*.js": "src 目录所有的 js 文件（不包含子文件夹）",
-    "src/**/*.js": "src 目录所有的 js 文件",
+  "*.js": "项目下所有的 js 文件（不包含子文件夹）",
+  "**/*.js": "项目下所有的 js 文件",
+  "src/*.js": "src 目录所有的 js 文件（不包含子文件夹）",
+  "src/**/*.js": "src 目录所有的 js 文件",
 }
 ```
 **多个后缀匹配**：
 ```json
 "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint",
+  "src/**/*.{js,jsx,ts,tsx}": "eslint",
   },
 ```
 

@@ -78,16 +78,16 @@
 9. **事件** (通过响应式事件触发的回调)
   - `watch`
   - 生命周期钩子 (按照它们被调用的顺序)
-    - `beforeCreate`
-    - `created`
-    - `beforeMount`
-    - `mounted`
-    - `beforeUpdate`
-    - `updated`
-    - `activated`
-    - `deactivated`
-    - `beforeDestroy`
-    - `destroyed`
+  - `beforeCreate`
+  - `created`
+  - `beforeMount`
+  - `mounted`
+  - `beforeUpdate`
+  - `updated`
+  - `activated`
+  - `deactivated`
+  - `beforeDestroy`
+  - `destroyed`
 
 10. **非响应式的 property** (不依赖响应系统的实例 property)
   - `methods`
@@ -122,13 +122,13 @@
 在多个方法之间添加一个空行，可以增加可读性（避免拥挤）。
 ```js
 methods: {
-    getName() {
+  getName() {
 
-    },
+  },
 
-    getAge() {
+  getAge() {
 
-    },
+  },
 }
 ```
 
